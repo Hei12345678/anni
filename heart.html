@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Anniversary</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Happy 2 Years and 6 Months Anniversary, My Babe! 💜</h1>
+    <p class="message">Every moment with you is special.Here's to many more wonderful years together! I love you more than everything you love me.😘</p>
+    
+    <img src="https://media.giphy.com/media/3ohs4BSacFKI7A717y/giphy.gif" alt="Love Animation" class="love-gif">
+    
+    <button onclick="showLoveMessage()">Click for a surprise</button>
+    <!-- <button onclick="changeBackground()">Change Background</button> -->
+    
+    <audio id="loveSong" src="https://youtube.com/shorts/T8jCQ8sipR0?si=baThx76VoBDy0C59" autoplay loop></audio>
+    
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 500);
+        
+        function showLoveMessage() {
+            alert("I love you so much! 💕 You mean the world to me!");
+        }
+        
+        function changeBackground() {
+            let colors = ["#ff9a9e",  "#a18cd1"];
+            document.body.style.background = `linear-gradient(to bottom, ${colors[Math.floor(Math.random() * colors.length)]}, white)`;
+        }
+    </script>
+</body>
+</html>
